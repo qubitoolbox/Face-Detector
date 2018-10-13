@@ -5,7 +5,6 @@ import requests
 import cv2
 import os
 
-
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-u", "--urls", required=True,
@@ -41,7 +40,6 @@ for url in rows:
 	except:
 		print("[INFO] error downloading {}...skipping".format(p))
 
-
 # loop over the image paths we just downloaded
 for imagePath in paths.list_images(args["output"]):
 	# initialize if the image should be deleted or not
@@ -67,5 +65,3 @@ for imagePath in paths.list_images(args["output"]):
 	if delete:
 		print("[INFO] deleting {}".format(imagePath))
 		os.remove(imagePath)
-	
-
