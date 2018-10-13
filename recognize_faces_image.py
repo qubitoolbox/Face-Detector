@@ -40,11 +40,7 @@ for encoding in encodings:
 	matches = face_recognition.compare_faces(data["encodings"],
 		encoding)
 	name = "Unknown"
-
-
-
-
-
+	
 	# check to see if we have found a match
 	if True in matches:
 		# find the indexes of all matched faces then initialize a
@@ -78,6 +74,3 @@ for ((top, right, bottom, left), name) in zip(boxes, names):
 # show the output image
 cv2.imshow("Image", image)
 cv2.waitKey(0)
-
-
-
