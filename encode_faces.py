@@ -6,7 +6,6 @@ import pickle
 import cv2
 import os
 
-
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--dataset", required=True,
@@ -17,7 +16,6 @@ ap.add_argument("-d", "--detection-method", type=str, default="hog",
 	help="face detection model to use: either `hog` or `cnn`")
 args = vars(ap.parse_args())
 
-
 # grab the paths to the input images in our dataset
 print("[INFO] quantifying faces...")
 imagePaths = list(paths.list_images(args["dataset"]))
@@ -26,12 +24,10 @@ imagePaths = list(paths.list_images(args["dataset"]))
 knownEncodings = []
 knownNames = []
 
-
 # loop over the image paths
 for (i, imagePath) in enumerate(imagePaths):
 
 	try:
-	
 		# extract the person name from the image path
 		print("[INFO] processing image {}/{}".format(i + 1,
 			len(imagePaths)))
@@ -41,7 +37,6 @@ for (i, imagePath) in enumerate(imagePaths):
 		# to dlib ordering (RGB)
 		image = cv2.imread(imagePath)
 		rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-	
 	
 		# detect the (x, y)-coordinates of the bounding boxes
 		# corresponding to each face in the input image
