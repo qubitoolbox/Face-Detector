@@ -1,1 +1,3 @@
-#
+#Face Detector
+
+This program consists of detecting faces in an image. It uses openCV to be able to preprocess images and then be fed into a Deep Learning network. This project was tested on Ubuntu version 16 and python 3.5. Data images were downloaded using a scrapper that retrieves Google images based on a searched query. The images then need to be in separate folders, considered as "Classes". In addition we use face_recognition library, which is a pre trained library used in this project, as the total time for training would be drastic and requires large data sets, and fast hardware before reaching a good global minima if training from scratch on such data set.
